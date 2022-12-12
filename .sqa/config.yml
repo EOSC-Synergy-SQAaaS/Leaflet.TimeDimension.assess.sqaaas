@@ -1,0 +1,52 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/socib/Leaflet.TimeDimension:
+      branch: master
+      repo: https://github.com/socib/Leaflet.TimeDimension
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/socib/Leaflet.TimeDimension git:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-saffron-bloodhound.sh
+        container: qc.acc_lanky-tomato-macaw
+  QC.Doc:
+    repos:
+      github.com/socib/Leaflet.TimeDimension find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-bronze-forest.sh
+        container: qc.doc_sunny-cinnamon-sheepdog
+      github.com/socib/Leaflet.TimeDimension git:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-silver-harrier.sh
+        container: qc.doc_tacky-auburn-gar
+      github.com/socib/Leaflet.TimeDimension markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-coral-audemer.sh
+        container: qc.doc_snazzy-bronze-greyhound
+  QC.Lic:
+    repos:
+      github.com/socib/Leaflet.TimeDimension licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-heliotrope-starfish.sh
+        container: qc.lic_sickly-cinnamon-antelope
+  QC.Sty:
+    repos:
+      github.com/socib/Leaflet.TimeDimension jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-buff-toad.sh
+        container: qc.sty_randy-pink-eel
+  QC.Ver:
+    repos:
+      github.com/socib/Leaflet.TimeDimension get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-lilac-tetra.sh
+        container: qc.ver_randy-amaranth-angelfish
+timeout: 5400
