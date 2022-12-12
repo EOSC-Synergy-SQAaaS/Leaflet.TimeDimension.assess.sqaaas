@@ -15,38 +15,38 @@ sqa_criteria:
     repos:
       github.com/socib/Leaflet.TimeDimension git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-saffron-bloodhound.sh
-        container: qc.acc_lanky-tomato-macaw
+        - /usr/bin/env sh .sqa/script.hilly-cinnamon-javanese.sh
+        container: qc.acc_breezy-aqua-pig
   QC.Doc:
     repos:
       github.com/socib/Leaflet.TimeDimension find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-bronze-forest.sh
-        container: qc.doc_sunny-cinnamon-sheepdog
+        - /usr/bin/env sh .sqa/script.hilly-goldenrod-hyena.sh
+        container: qc.doc_dorky-black-dingo
       github.com/socib/Leaflet.TimeDimension git:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-silver-harrier.sh
-        container: qc.doc_tacky-auburn-gar
+        - /usr/bin/env sh .sqa/script.thirsty-cornflower-seahorse.sh
+        container: qc.doc_shabby-tangerine-ocelot
       github.com/socib/Leaflet.TimeDimension markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-coral-audemer.sh
-        container: qc.doc_snazzy-bronze-greyhound
+        - /usr/bin/env sh .sqa/script.stealthy-blue-crab.sh
+        container: qc.doc_wheezy-coral-sheepdog
   QC.Lic:
     repos:
       github.com/socib/Leaflet.TimeDimension licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-heliotrope-starfish.sh
-        container: qc.lic_sickly-cinnamon-antelope
+        - /usr/bin/env sh .sqa/script.slaphappy-indigo-raccoon.sh
+        container: qc.lic_cheeky-rust-falcon
   QC.Sty:
     repos:
       github.com/socib/Leaflet.TimeDimension jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-buff-toad.sh
-        container: qc.sty_randy-pink-eel
+        - /usr/bin/env sh .sqa/script.gamy-bronze-buffalo.sh
+        container: qc.sty_gimpy-thistle-corgi
   QC.Ver:
     repos:
       github.com/socib/Leaflet.TimeDimension get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-lilac-tetra.sh
-        container: qc.ver_randy-amaranth-angelfish
+        - /usr/bin/env sh .sqa/script.cozy-vermilion-shrimp.sh
+        container: qc.ver_paltry-asparagus-dragon
 timeout: 5400
